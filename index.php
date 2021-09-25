@@ -1,8 +1,8 @@
 <?php
 
 $API_URL = 'https://api.line.me/v2/bot/message/reply';
-$ACCESS_TOKEN = 'aaaxiG3zAzb6Td2DBgQsScZurNVYllaCiIU+oN+LIrPX5FlwjUXWKPQjWc1LhrKNvDqyyCLEsLuXofHNZPaDPS9dP/fWhyxTSGs2rAH5i9PkgrmnVnmkvk3uXCh6T0LWL/aNQnE1yK8+fUhevcPDzrhmAdB04t89/1O/w1cDnyilFU='; // Access Token ค่าที่เราสร้างขึ้น
-$POST_HEADER = array('Content-Type: application/json', 'Authorization: Bearer ' . $ACCESS_TOKEN);
+$ACCESS_TOKEN = 'xiG3zAzb6Td2DBgQsScZurNVYllaCiIU+oN+LIrPX5FlwjUXWKPQjWc1LhrKNvDqyyCLEsLuXofHNZPaDPS9dP/fWhyxTSGs2rAH5i9PkgrmnVnmkvk3uXCh6T0LWL/aNQnE1yK8+fUhevcPDzrhmAdB04t89/1O/w1cDnyilFU='; // Access Token ค่าที่เราสร้างขึ้น
+$POST_HEADER = array('Content-Type: application/json', 'Authorization: lex ' . $ACCESS_TOKEN);
 
 $request = file_get_contents('php://input');   // Get request content
 $request_array = json_decode($request, true);   // Decode JSON to Array
@@ -44,7 +44,7 @@ if ( sizeof($request_array['events']) > 0 )
  }
 }
 
-echo "OK";
+//echo "OK";
 
 function send_reply_message($url, $post_header, $post_body)
 {
