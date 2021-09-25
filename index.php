@@ -29,4 +29,5 @@ echo "status : ".$result_['status']; echo "message : ". $result_['message']; }
 //Close connect 
 curl_close( $chOne ); 
 }
+senline('ทดสอบ');
 ?>
