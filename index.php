@@ -1,20 +1,20 @@
 <?php
 // $photo=$_GET["photo"];
-/*-------------line noti----------------------*/
-     $message = 'test send photo';    //text max 1,000 charecter
+/*-------------line noti----------------------
+ //    $message = 'test send photo';    //text max 1,000 charecter
    // $image_thumbnail_url = 'http://localhost/line/send-photo/photo-thumb.jpg';  // max size 240x240px JPEG
   //  $image_fullsize_url = 'https://uts.ac.th/lex/gpa/picteacher/0777d5c17d4066b82ab86dff8a46af6f.jpg' //$photo; //max size 1024x1024px JPEG
    
-     $image_thumbnail_url = 'https://dummyimage.com/1024x1024/f598f5/fff.jpg';  // max size 240x240px JPEG
-    $image_fullsize_url = 'https://dummyimage.com/1024x1024/844334/fff.jpg'; //max size 1024x1024px JPEG
-    $imageFile = 'copy/240.jpg';
+  //   $image_thumbnail_url = 'https://dummyimage.com/1024x1024/f598f5/fff.jpg';  // max size 240x240px JPEG
+ //   $image_fullsize_url = 'https://dummyimage.com/1024x1024/844334/fff.jpg'; //max size 1024x1024px JPEG
+ //   $imageFile = 'copy/240.jpg';
 
         
    // $imageFile = 'copy/240.jpg';
-    $sticker_package_id = '';  // Package ID sticker
-    $sticker_id = '';    // ID sticker
+ //   $sticker_package_id = '';  // Package ID sticker
+//    $sticker_id = '';    // ID sticker
 
-    $message_data = array(
+//    $message_data = array(
   'imageThumbnail' => $image_thumbnail_url,
   'imageFullsize' => $image_fullsize_url,
   'message' => $message,
@@ -22,6 +22,7 @@
   'stickerPackageId' => $sticker_package_id,
   'stickerId' => $sticker_id
     );
+    */
  
 $API_URL = 'https://api.line.me/v2/bot/message/reply';
 $ACCESS_TOKEN = 'q3z1jYmFhn2A2Ee2fGiAdRLaP5PEbqvRtuFaYm/leVoFJ1JtZggY0xuMTjDMLsjj96Foc0dZY+l977JRm9ysL2vc/DjWrMqn7nz33FLPTI8oC5MaWBv6ODbMEP9oG3L/8O6KRekJxX1mSKqwlzF9cgdB04t89/1O/w1cDnyilFU='; // Access Token ค่าที่เราสร้างขึ้น
@@ -55,9 +56,18 @@ if ( sizeof($request_array['events']) > 0 )
   if( strlen($reply_message) > 0 )
   {
    //$reply_message = iconv("tis-620","utf-8",$reply_message);
+    /*   {
+    "type": "image",
+    "originalContentUrl": "https://example.com/original.jpg",
+    "previewImageUrl": "https://example.com/preview.jpg"
+}*/
+        $image_thumbnail_url = 'https://dummyimage.com/1024x1024/f598f5/fff.jpg';  // max size 240x240px JPEG
+  $image_fullsize_url = 'https://dummyimage.com/1024x1024/844334/fff.jpg'; //max size 1024x1024px JPEG
+       
    $data = [
     'replyToken' => $reply_token,
-    'messages' => [['type' => 'text', 'text' => $reply_message]]
+    'messages' => [['type' => 'text', 'text' => $reply_message]],
+     'image' => [['type' => 'image', 'originalContentUrl' => $image_fullsize_url,'previewImageUrl' => $image_thumbnail_url]]
    ];
     
 
