@@ -1,11 +1,10 @@
- 
 <?php
 $token = "q3z1jYmFhn2A2Ee2fGiAdRLaP5PEbqvRtuFaYm/leVoFJ1JtZggY0xuMTjDMLsjj96Foc0dZY+l977JRm9ysL2vc/DjWrMqn7nz33FLPTI8oC5MaWBv6ODbMEP9oG3L/8O6KRekJxX1mSKqwlzF9cgdB04t89/1O/w1cDnyilFU=" ; // LINE Token
 //Message
 $mymessage = "เรื่อง: ทดสอบส่งข้อความ \n"; //Set new line with '\n'
 $mymessage .= "จาก: ข้อความจากแมว \n";
 $mymessage .= "รายละเอียด: แมวหิวแล้วจ้า";
-$imageFile = new CURLFILE('cat.jpg'); // Local Image file Path
+$imageFile = new CURLFILE('https://uts.ac.th/lex/gpa/picteacher/0777d5c17d4066b82ab86dff8a46af6f.jpg'); // Local Image file Path
 $sticker_package_id = '2';  // Package ID sticker
 $sticker_id = '34';    // ID sticker
   $data = array (
