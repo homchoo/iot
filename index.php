@@ -25,46 +25,46 @@ $line_api = 'https://api.line.me/v2/bot/message/reply'; //'https://notify-api.li
   'stickerPackageId' => $sticker_package_id,
   'stickerId' => $sticker_id
     );
+
+$API_URL = 'https://api.line.me/v2/bot/message/reply';
+$ACCESS_TOKEN = 'q3z1jYmFhn2A2Ee2fGiAdRLaP5PEbqvRtuFaYm/leVoFJ1JtZggY0xuMTjDMLsjj96Foc0dZY+l977JRm9ysL2vc/DjWrMqn7nz33FLPTI8oC5MaWBv6ODbMEP9oG3L/8O6KRekJxX1mSKqwlzF9cgdB04t89/1O/w1cDnyilFU='; // Access Token ค่าที่เราสร้างขึ้น
+$POST_HEADER = array('Content-Type: application/json', 'Authorization: Bearer ' . $ACCESS_TOKEN);
+
    $data = [
     'replyToken' => $access_token,
     'messages' => [['type' => 'text', 'text' => $message]]
    ];
     
 
+   $post_body = json_encode($data, JSON_UNESCAPED_UNICODE);
+
+   $send_result = send_reply_message($API_URL, $POST_HEADER, $post_body);
+   echo "Result: ".$send_result."\r\n";
     
-   $message_data = json_encode($data, JSON_UNESCAPED_UNICODE);
+  
 
-    $result = send_notify_message($line_api, $access_token, $message_data);
+function send_reply_message($url, $post_header, $post_body)
+{
+ $ch = curl_init($url);
+ curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "POST");
+ curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+ curl_setopt($ch, CURLOPT_HTTPHEADER, $post_header);
+ curl_setopt($ch, CURLOPT_POSTFIELDS, $post_body);
+ curl_setopt($ch, CURLOPT_FOLLOWLOCATION, 1);
+ $result = curl_exec($ch);
+ curl_close($ch);
 
-echo '<pre>';
-     print_r($result);
-     echo '</pre>';
+ return $result;
+}
+
+
+
+ 
 /*-------------line noti----------------------*/
 
 
 
-function send_notify_message($line_api, $access_token, $message_data){
-   $headers = array('Method: POST', 'Content-type: multipart/form-data', 'Authorization: Bearer '.$access_token );
-
-   $ch = curl_init();
-   curl_setopt($ch, CURLOPT_URL, $line_api);
-   curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
-   curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, 0);
-   curl_setopt($ch, CURLOPT_POSTFIELDS, $message_data);
-   curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
-   $result = curl_exec($ch);
-   // Check Error
-   if(curl_error($ch))
-   {
-      $return_array = array( 'status' => '000: send fail', 'message' => curl_error($ch) );
-   }
-   else
-   {
-      $return_array = json_decode($result, true);
-   }
-   curl_close($ch);
-return $return_array;
-}
+ 
 
 ?>
 /*
