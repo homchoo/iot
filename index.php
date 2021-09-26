@@ -25,6 +25,14 @@ $line_api = 'https://api.line.me/v2/bot/message/reply'; //'https://notify-api.li
   'stickerPackageId' => $sticker_package_id,
   'stickerId' => $sticker_id
     );
+   $data = [
+    'replyToken' => $reply_token,
+    'messages' => [['type' => 'text', 'text' => $reply_message]]
+   ];
+    
+
+    
+   $message_data = json_encode($data, JSON_UNESCAPED_UNICODE);
 
     $result = send_notify_message($line_api, $access_token, $message_data);
 
@@ -76,6 +84,9 @@ $sticker_id = '34';    // ID sticker
     'stickerPackageId' => $sticker_package_id,
     'stickerId' => $sticker_id
   );
+
+ 
+
   $chOne = curl_init();
   curl_setopt( $chOne, CURLOPT_URL, "https://notify-api.line.me/api/notify");
   curl_setopt( $chOne, CURLOPT_SSL_VERIFYHOST, 0);
@@ -134,20 +145,7 @@ if ( sizeof($request_array['events']) > 0 )
     'messages' => [['type' => 'text', 'text' => $reply_message]]
    ];
     
-    $token = "q3z1jYmFhn2A2Ee2fGiAdRLaP5PEbqvRtuFaYm/leVoFJ1JtZggY0xuMTjDMLsjj96Foc0dZY+l977JRm9ysL2vc/DjWrMqn7nz33FLPTI8oC5MaWBv6ODbMEP9oG3L/8O6KRekJxX1mSKqwlzF9cgdB04t89/1O/w1cDnyilFU=" ; // LINE Token
-//Message
-$mymessage = "เรื่อง: ทดสอบส่งข้อความ \n"; //Set new line with '\n'
-$mymessage .= "จาก: ข้อความจากแมว \n";
-$mymessage .= "รายละเอียด: แมวหิวแล้วจ้า";
-$imageFile = new CURLFILE('https://uts.ac.th/lex/gpa/picteacher/0777d5c17d4066b82ab86dff8a46af6f.jpg'); // Local Image file Path
-$sticker_package_id = '2';  // Package ID sticker
-$sticker_id = '34';    // ID sticker
-  $data = array (
-    'message' => $mymessage,
-    'imageFile' => $imageFile,
-    'stickerPackageId' => $sticker_package_id,
-    'stickerId' => $sticker_id
-  );
+
     
    $post_body = json_encode($data, JSON_UNESCAPED_UNICODE);
 
