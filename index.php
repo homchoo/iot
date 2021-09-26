@@ -65,6 +65,7 @@ if ( sizeof($request_array['events']) > 0 )
      'image' => ['type' => 'image', 'url' => 'https://www.linefriends.com/img/img_sec.jpg','size' =>'full','aspectRatio'=>'2:1']
    ];
    $myObj = new stdClass();
+$myObj->replyToken = $reply_token;   
 $myObj->type = "image";
 $myObj->previewImageUrl ="https://dummyimage.com/1024x1024/f598f5/fff.jpg";
 $myObj->originalContentUrl = "https://dummyimage.com/1024x1024/844334/fff.jpg"; 
