@@ -38,7 +38,7 @@ if ( sizeof($request_array['events']) > 0 )
    $data = [
     'replyToken' => $reply_token, 
      'messages' => [['type' => 'image', 'originalContentUrl' =>'https://www.chomsurang.ac.th/chomlearning/head.png',
-                    'previewImageUrl' =>'https://www.chomsurang.ac.th/chomlearning/head.png' ]]
+                    'previewImageUrl' =>'https://www.uts.ac.th/logo.png' ]]
    ];
     
        
