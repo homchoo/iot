@@ -26,8 +26,8 @@ $line_api = 'https://api.line.me/v2/bot/message/reply'; //'https://notify-api.li
   'stickerId' => $sticker_id
     );
    $data = [
-    'replyToken' => $reply_token,
-    'messages' => [['type' => 'text', 'text' => $reply_message]]
+    'replyToken' => $access_token,
+    'messages' => [['type' => 'text', 'text' => $message]]
    ];
     
 
