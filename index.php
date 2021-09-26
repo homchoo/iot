@@ -56,21 +56,12 @@ if ( sizeof($request_array['events']) > 0 )
   if( strlen($reply_message) > 0 )
   {
    //$reply_message = iconv("tis-620","utf-8",$reply_message);
-  
- 
-  
-   $myObj = new stdClass();
-$myObj->replyToken = $reply_token;   
-$myObj->type = "image";
-$myObj->previewImageUrl ="https://dummyimage.com/1024x1024/f598f5/fff.jpg";
-$myObj->originalContentUrl = "https://dummyimage.com/1024x1024/844334/fff.jpg"; 
-   // $post_body = json_encode($myObj, JSON_UNESCAPED_UNICODE);
-
+   
       
    $data = [
     'replyToken' => $reply_token, 
-     'messages' => [['type' => 'image', 'originalContentUrl' =>'https://dummyimage.com/1024x1024/844334/fff.jpg',
-                    'previewImageUrl' =>'https://dummyimage.com/1024x1024/f598f5/fff.jpg' ]]
+     'messages' => [['type' => 'image', 'originalContentUrl' =>'https://uts.ac.th/lex/gpa/picteacher/9bf31c7ff062936a96d3c8bd1f8f2ff3.jpg',
+                    'previewImageUrl' =>'https://uts.ac.th/lex/gpa/picteacher/9bf31c7ff062936a96d3c8bd1f8f2ff3.jpg' ]]
    ];
    
     $post_body = json_encode($data, JSON_UNESCAPED_UNICODE);
