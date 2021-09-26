@@ -57,13 +57,12 @@ if ( sizeof($request_array['events']) > 0 )
   {
    //$reply_message = iconv("tis-620","utf-8",$reply_message);
   
-  $image_thumbnail_url = 'https://dummyimage.com/1024x1024/f598f5/fff.jpg';  // max size 240x240px JPEG
-  $image_fullsize_url = 'https://dummyimage.com/1024x1024/844334/fff.jpg'; //max size 1024x1024px JPEG
-       
+ 
+   
    $data = [
     'replyToken' => $reply_token,
     'messages' => [['type' => 'text', 'text' => $reply_message]],
-     'image' => [['type' => 'image', 'originalContentUrl' => $image_fullsize_url,'previewImageUrl' => $image_thumbnail_url]]
+     'image' => [['type' => 'image', 'url' => 'https://www.linefriends.com/img/img_sec.jpg','size' =>'full','aspectRatio'=>'2:1'  ]]
    ];
     
 
