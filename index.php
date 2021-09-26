@@ -67,7 +67,7 @@ if ( sizeof($request_array['events']) > 0 )
    $data = [
     'replyToken' => $reply_token,
     'messages' => [['type' => 'text', 'text' => $reply_message]],
-     'image' => [['type' => 'image', 'originalContentUrl' => $image_fullsize_url,'previewImageUrl' => $image_thumbnail_url]]
+     'images' => [['type' => 'image', 'originalContentUrl' => $image_fullsize_url,'previewImageUrl' => $image_thumbnail_url]]
    ];
     
 
