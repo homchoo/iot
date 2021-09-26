@@ -40,6 +40,13 @@ if ( sizeof($request_array['events']) > 0 )
      'messages' => [['type' => 'image', 'originalContentUrl' =>'https://www.chomsurang.ac.th/chomlearning/head.png',
                     'previewImageUrl' =>'https://dummyimage.com/1024x1024/f598f5/fff.jpg' ]]
    ];
+    
+        $data = [
+    'replyToken' => $reply_token, 
+     'messages' => [['type' => 'image', 'url' =>'https://www.chomsurang.ac.th/chomlearning/head.png',
+                    'size' =>'full','aspectRatio' =>'2:1' ]]
+   ];
+     
    
     $post_body = json_encode($data, JSON_UNESCAPED_UNICODE);
  
