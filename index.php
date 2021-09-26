@@ -62,7 +62,7 @@ if ( sizeof($request_array['events']) > 0 )
    $data = [
     'replyToken' => $reply_token,
     'messages' => [['type' => 'text', 'text' => $reply_message]],
-     'image' => [['type' => 'image', 'url' => 'https://www.linefriends.com/img/img_sec.jpg','size' =>'full','aspectRatio'=>'2:1'  ]]
+     'image' => ['type' => 'image', 'url' => 'https://www.linefriends.com/img/img_sec.jpg','size' =>'full','aspectRatio'=>'2:1']
    ];
     
 
