@@ -1,8 +1,8 @@
 <?php
 // $photo=$_GET["photo"];
 /*-------------line noti----------------------*/
-$line_api = 'https://notify-api.line.me/api/notify';
-    $access_token = "q3z1jYmFhn2A2Ee2fGiAdRLaP5PEbqvRtuFaYm/leVoFJ1JtZggY0xuMTjDMLsjj96Foc0dZY+l977JRm9ysL2vc/DjWrMqn7nz33FLPTI8oC5MaWBv6ODbMEP9oG3L/8O6KRekJxX1mSKqwlzF9cgdB04t89/1O/w1cDnyilFU=" ;
+$line_api = 'https://api.line.me/v2/bot/message/reply'; //'https://notify-api.line.me/api/notify';
+    $access_token ='q3z1jYmFhn2A2Ee2fGiAdRLaP5PEbqvRtuFaYm/leVoFJ1JtZggY0xuMTjDMLsjj96Foc0dZY+l977JRm9ysL2vc/DjWrMqn7nz33FLPTI8oC5MaWBv6ODbMEP9oG3L/8O6KRekJxX1mSKqwlzF9cgdB04t89/1O/w1cDnyilFU=' ;
 
     $message = 'test send photo';    //text max 1,000 charecter
    // $image_thumbnail_url = 'http://localhost/line/send-photo/photo-thumb.jpg';  // max size 240x240px JPEG
@@ -13,7 +13,7 @@ $line_api = 'https://notify-api.line.me/api/notify';
     $imageFile = 'copy/240.jpg';
 
         
-    $imageFile = 'copy/240.jpg';
+   // $imageFile = 'copy/240.jpg';
     $sticker_package_id = '';  // Package ID sticker
     $sticker_id = '';    // ID sticker
 
