@@ -5,8 +5,14 @@ $line_api = 'https://notify-api.line.me/api/notify';
     $access_token = "q3z1jYmFhn2A2Ee2fGiAdRLaP5PEbqvRtuFaYm/leVoFJ1JtZggY0xuMTjDMLsjj96Foc0dZY+l977JRm9ysL2vc/DjWrMqn7nz33FLPTI8oC5MaWBv6ODbMEP9oG3L/8O6KRekJxX1mSKqwlzF9cgdB04t89/1O/w1cDnyilFU=" ;
 
     $message = 'test send photo';    //text max 1,000 charecter
-    $image_thumbnail_url = 'http://localhost/line/send-photo/photo-thumb.jpg';  // max size 240x240px JPEG
-    $image_fullsize_url = 'https://uts.ac.th/lex/gpa/picteacher/0777d5c17d4066b82ab86dff8a46af6f.jpg' //$photo; //max size 1024x1024px JPEG
+   // $image_thumbnail_url = 'http://localhost/line/send-photo/photo-thumb.jpg';  // max size 240x240px JPEG
+  //  $image_fullsize_url = 'https://uts.ac.th/lex/gpa/picteacher/0777d5c17d4066b82ab86dff8a46af6f.jpg' //$photo; //max size 1024x1024px JPEG
+   
+     $image_thumbnail_url = 'https://dummyimage.com/1024x1024/f598f5/fff.jpg';  // max size 240x240px JPEG
+    $image_fullsize_url = 'https://dummyimage.com/1024x1024/844334/fff.jpg'; //max size 1024x1024px JPEG
+    $imageFile = 'copy/240.jpg';
+
+        
     $imageFile = 'copy/240.jpg';
     $sticker_package_id = '';  // Package ID sticker
     $sticker_id = '';    // ID sticker
