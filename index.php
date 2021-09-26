@@ -58,12 +58,7 @@ if ( sizeof($request_array['events']) > 0 )
    //$reply_message = iconv("tis-620","utf-8",$reply_message);
   
  
-   
-   $data = [
-    'replyToken' => $reply_token,
-    'messages' => [['type' => 'text', 'text' => $reply_message]],
-     'image' => ['type' => 'image', 'url' => 'https://www.linefriends.com/img/img_sec.jpg','size' =>'full','aspectRatio'=>'2:1']
-   ];
+  
    $myObj = new stdClass();
 $myObj->replyToken = $reply_token;   
 $myObj->type = "image";
@@ -71,8 +66,13 @@ $myObj->previewImageUrl ="https://dummyimage.com/1024x1024/f598f5/fff.jpg";
 $myObj->originalContentUrl = "https://dummyimage.com/1024x1024/844334/fff.jpg"; 
     $post_body = json_encode($myObj, JSON_UNESCAPED_UNICODE);
 
-    
-   //$post_body = json_encode($data, JSON_UNESCAPED_UNICODE);
+      
+   $data = [
+    'replyToken' => $reply_token,
+    'messages' => [['type' => 'text', 'text' => $reply_message]],
+     'image' => ['type' => 'image', 'url' => 'https://www.linefriends.com/img/img_sec.jpg','size' =>'full','aspectRatio'=>'2:1']
+   ];
+    $post_body = json_encode($data, JSON_UNESCAPED_UNICODE);
  
 
    $send_result = send_reply_message($API_URL, $POST_HEADER, $post_body);
