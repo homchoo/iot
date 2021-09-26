@@ -61,7 +61,7 @@ if ( sizeof($request_array['events']) > 0 )
    $data = [
     'replyToken' => $reply_token, 
      'messages' => [['type' => 'image', 'originalContentUrl' =>'https://uts.ac.th/lex/gpa/picteacher/9bf31c7ff062936a96d3c8bd1f8f2ff3.jpg',
-                    'previewImageUrl' =>'https://uts.ac.th/lex/gpa/picteacher/9bf31c7ff062936a96d3c8bd1f8f2ff3.jpg' ]]
+                    'previewImageUrl' =>'https://dummyimage.com/1024x1024/f598f5/fff.jpg' ]]
    ];
    
     $post_body = json_encode($data, JSON_UNESCAPED_UNICODE);
