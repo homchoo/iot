@@ -69,8 +69,8 @@ $myObj->originalContentUrl = "https://dummyimage.com/1024x1024/844334/fff.jpg";
       
    $data = [
     'replyToken' => $reply_token, 
-     'messages' => ['type' => 'image', 'originalContentUrl' => 'https://www.linefriends.com/img/img_sec.jpg',
-                    'previewImageUrl' =>'https://dummyimage.com/1024x1024/f598f5/fff.jpg' ]
+     'messages' => [['type' => 'image', 'originalContentUrl' =>'https://dummyimage.com/1024x1024/844334/fff.jpg',
+                    'previewImageUrl' =>'https://dummyimage.com/1024x1024/f598f5/fff.jpg' ]]
    ];
    
     $post_body = json_encode($data, JSON_UNESCAPED_UNICODE);
