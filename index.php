@@ -64,12 +64,13 @@ $myObj->replyToken = $reply_token;
 $myObj->type = "image";
 $myObj->previewImageUrl ="https://dummyimage.com/1024x1024/f598f5/fff.jpg";
 $myObj->originalContentUrl = "https://dummyimage.com/1024x1024/844334/fff.jpg"; 
-    $post_body = json_encode($myObj, JSON_UNESCAPED_UNICODE);
+   // $post_body = json_encode($myObj, JSON_UNESCAPED_UNICODE);
 
       
    $data = [
     'replyToken' => $reply_token, 
-     'messages' => ['type' => 'image', 'url' => 'https://www.linefriends.com/img/img_sec.jpg','size' =>'full','aspectRatio'=>'2:1']
+     'messages' => ['type' => 'image', 'originalContentUrl' => 'https://www.linefriends.com/img/img_sec.jpg',
+                    'previewImageUrl' =>'https://dummyimage.com/1024x1024/f598f5/fff.jpg' ]
    ];
    
     $post_body = json_encode($data, JSON_UNESCAPED_UNICODE);
