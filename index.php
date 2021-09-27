@@ -1,4 +1,13 @@
 <?php
+
+// Remote image URL
+$url = 'https://uts.ac.th/logo.png';
+
+// Image path
+$img = 'logo.png';
+
+// Save image 
+file_put_contents($img, file_get_contents($url));
  
  
 $API_URL = 'https://api.line.me/v2/bot/message/reply';
