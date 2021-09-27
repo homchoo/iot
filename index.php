@@ -46,9 +46,8 @@ if ( sizeof($request_array['events']) > 0 )
       
    $data = [
     'replyToken' => $reply_token, 
-    'messages' => [['type' => 'text', 'text' => $reply_message]],
-     'messages' => [['type' => 'image', 'originalContentUrl' =>'https://64.media.tumblr.com/b799efb8c9a6e9ed7d46169a936f85e2/tumblr_mw35bo6Pva1rk9q7go2_r1_640.gifv',
-                    'previewImageUrl' =>'https://th.seaicons.com/wp-content/uploads/2016/05/Letter-B-icon.png'
+    'messages' => [['type' => 'image', 'originalContentUrl' =>'https://inwfile.com/s-fn/jklp9x.jpg',
+                    'previewImageUrl' =>'https://inwfile.com/s-fn/jklp9x.jpg'
                   ]]
    ];
     
